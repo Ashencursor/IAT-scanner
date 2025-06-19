@@ -125,7 +125,7 @@ int main() {
 	const HMODULE curr_Module = GetModuleHandleA(NULL);
 	MessageBoxA(nullptr, "HEllo", "World", 0);
 	//Allocated memory 
-	std::vector<std::uint8_t> originalData = GetRawDllBytesFromFile("C:\\Users\\osawi\\source\\repos\\IAT scanner\\x64\\Debug\\IAT scanner.exe");
+	std::vector<std::uint8_t> originalData = GetRawDllBytesFromFile("C:\\Users\\JoeShmoe\\source\\repos\\IAT scanner\\x64\\Debug\\IAT scanner.exe");
 	auto dos = reinterpret_cast<PIMAGE_DOS_HEADER>(originalData.data());
     auto NT = reinterpret_cast<PIMAGE_NT_HEADERS>(dos->e_lfanew + reinterpret_cast<uintptr_t>(originalData.data()));
 
